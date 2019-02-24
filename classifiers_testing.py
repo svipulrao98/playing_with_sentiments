@@ -87,6 +87,12 @@ knn_classifier.fit(X_train_vectorized, y_train)
 predictions3=knn_classifier.predict(X_test_vectorized)
 
 
-
-
-
+#naive bayes
+# =============================================================================
+# POOREST
+# =============================================================================
+naive_classifier = GaussianNB()
+#train
+naive_classifier.fit(X_train_vectorized.toarray(), y_train)
+#test
+predictions4=naive_classifier.predict(X_test_vectorized.toarray())
